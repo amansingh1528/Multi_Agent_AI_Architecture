@@ -1,0 +1,54 @@
+import requests
+import json
+
+# Define a function to fetch data from Serper
+def fetch_serper_data(query, api_key):
+    """
+    Fetches relevant search results from Serper API based on a given query.
+
+    Parameters:
+    - query: The search query string (e.g., "apple inc")
+    - api_key: Your Serper API key
+
+    Returns:
+    - A dictionary containing search results from Serper API or an error message.
+    """
+    # Define the Serper endpoint URL
+    endpoint = "https://google.serper.dev/search"  # Correct endpoint from your cURL example
+
+    # Set headers with the API key and content type
+    headers = {
+        "X-API-KEY": api_key,  # Use the correct API key header
+        "Content-Type": "application/json",  # Set content type to JSON
+    }
+
+    # Prepare the payload data (query in JSON format)
+    data = json.dumps({
+        "q": query  # The search query parameter
+    })
+
+    # Make the POST request to the Serper API
+    response = requests.post(endpoint, headers=headers, data=data)
+
+    if response.status_code == 200:
+        # Return the JSON data if the request is successful
+        return response.json()
+    else:
+        # Handle errors and return the error message
+        return {"error": f"Failed to fetch data from Serper. Status code: {response.status_code}"}
+
+# Example usage
+api_key = '44f18d81d3b3ba224383661e78d4a854b49d20fb'  # Replace with your actual API key
+query = "AI applications in healthcare"  # Example search query
+data = fetch_serper_data(query, api_key)
+
+# Check if data contains an error, otherwise print results
+if "error" not in data:
+    print("Fetched data from Serper:")
+    # Loop through the organic search results and print relevant details
+    for result in data.get("organic", []):  # Assuming 'organic' holds the search results
+        print(f"Title: {result['title']}")
+        print(f"URL: {result['link']}")
+        print(f"Snippet: {result['snippet']}\n")
+else:
+    print(data["error"])
