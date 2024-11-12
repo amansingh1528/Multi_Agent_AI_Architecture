@@ -38,7 +38,7 @@ def fetch_serper_data(query, api_key):
         return {"error": f"Failed to fetch data from Serper. Status code: {response.status_code}"}
 
 # Example usage
-api_key = '44f18d81d3b3ba224383661e78d4a854b49d20fb'  # Replace with your actual API key
+api_key = '<SERPER-API-KEY>'  # Replace with your actual API key
 query = "AI applications in healthcare"  # Example search query
 data = fetch_serper_data(query, api_key)
 
