@@ -1,4 +1,9 @@
+
 collaboration_result={}
+
+import json
+from agents.collaboration_agent import collaborate_with_crew_agents,collaboration_result
+
 
 def validate_and_refine(collaboration_result, feedback):
     """
@@ -22,3 +27,5 @@ def validate_and_refine(collaboration_result, feedback):
 feedback = "good"  # Example feedback from users or systems
 final_result = validate_and_refine(collaboration_result, feedback)
 print("Final Validated Result:", final_result)
+print("Final Validated Result:", json.dumps(final_result, indent=4))
+

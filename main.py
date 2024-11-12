@@ -6,6 +6,8 @@ from agents.resource_reccomendation_agent import recommend_resources
 from agents.collaboration_agent import collaborate_with_crew_agents
 from agents.validation import validate_and_refine
 
+import json
+
 def multi_agent_system(query, serper_api_key, feedback):
     # Data Ingestion Agent
     data = fetch_serper_data(query, serper_api_key)
@@ -33,6 +35,11 @@ def multi_agent_system(query, serper_api_key, feedback):
 # Example usage
 query = "AI applications in healthcare"
 feedback = "The results need more emphasis on healthcare-specific use cases."
+
 final_result = multi_agent_system(query, '<SERPER-API-KEY>', feedback)
 print(final_result)
+
+
+final_result = multi_agent_system(query, '44f18d81d3b3ba224383661e78d4a854b49d20fb', feedback)
+print(json.dumps(final_result, indent=4))
 

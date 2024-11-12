@@ -1,19 +1,25 @@
 import requests
 import json
 
+
 # Define a function to fetch data from Serper
+
 def fetch_serper_data(query, api_key):
     """
     Fetches relevant search results from Serper API based on a given query.
 
     Parameters:
+<<<<<<< HEAD
     - query: The search query string (e.g., "apple inc")
+=======
+    - query: The search query string (e.g., "AI applications in healthcare")
+
     - api_key: Your Serper API key
 
     Returns:
     - A dictionary containing search results from Serper API or an error message.
     """
-    # Define the Serper endpoint URL
+
     endpoint = "https://google.serper.dev/search"  # Correct endpoint from your cURL example
 
     # Set headers with the API key and content type
@@ -21,6 +27,7 @@ def fetch_serper_data(query, api_key):
         "X-API-KEY": api_key,  # Use the correct API key header
         "Content-Type": "application/json",  # Set content type to JSON
     }
+
 
     # Prepare the payload data (query in JSON format)
     data = json.dumps({
@@ -30,6 +37,21 @@ def fetch_serper_data(query, api_key):
     # Make the POST request to the Serper API
     response = requests.post(endpoint, headers=headers, data=data)
 
+    # Ensure that the query is a string
+    if not isinstance(query, str):
+        raise ValueError("Query must be a string.")
+
+    # Prepare the payload data (query in JSON format)
+    data = {
+        "q": query,  # The search query parameter as a string
+        "type": "search",  # Define the type if needed
+        "engine": "google"  # Specify the engine used for the search
+    }
+
+    # Make the POST request to the Serper API
+    response = requests.post(endpoint, headers=headers, json=data)  # Use json= instead of data=
+
+
     if response.status_code == 200:
         # Return the JSON data if the request is successful
         return response.json()
@@ -38,7 +60,11 @@ def fetch_serper_data(query, api_key):
         return {"error": f"Failed to fetch data from Serper. Status code: {response.status_code}"}
 
 # Example usage
+
 api_key = '<SERPER-API-KEY>'  # Replace with your actual API key
+
+api_key = '44f18d81d3b3ba224383661e78d4a854b49d20fb'  # Replace with your actual API key
+
 query = "AI applications in healthcare"  # Example search query
 data = fetch_serper_data(query, api_key)
 

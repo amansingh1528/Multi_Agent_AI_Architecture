@@ -1,3 +1,4 @@
+
 use_cases = [
     "Predictive Maintenance for AI-powered devices",
     "Customer Service Automation with AI Chatbots",
@@ -5,6 +6,9 @@ use_cases = [
     "AI for Personalized Healthcare Recommendations",
     "AI-driven Diagnostics and Imaging Solutions"
 ]
+
+
+from agents.genai_usecase import generate_use_case, use_cases
 
 def recommend_resources(use_cases):
     """
