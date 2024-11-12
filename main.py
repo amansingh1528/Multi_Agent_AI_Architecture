@@ -33,6 +33,6 @@ def multi_agent_system(query, serper_api_key, feedback):
 # Example usage
 query = "AI applications in healthcare"
 feedback = "The results need more emphasis on healthcare-specific use cases."
-final_result = multi_agent_system(query, '44f18d81d3b3ba224383661e78d4a854b49d20fb', feedback)
+final_result = multi_agent_system(query, '<SERPER-API-KEY>', feedback)
 print(final_result)
 
