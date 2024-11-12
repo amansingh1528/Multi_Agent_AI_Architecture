@@ -31,7 +31,7 @@ def fetch_market_research_data(query, serper_api_key):
         return {"error": f"Failed to fetch data from Serper. Status code: {response.status_code}"}
 
 # Example usage
-serper_api_key = '44f18d81d3b3ba224383661e78d4a854b49d20fb'  # Replace with your Serper API key
+serper_api_key = '<SERPER-API-KEY>'  # Replace with your Serper API key
 query = "AI trends in healthcare"
 market_data = fetch_market_research_data(query, serper_api_key)
 
