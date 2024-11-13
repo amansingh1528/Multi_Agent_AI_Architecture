@@ -31,7 +31,7 @@ The system uses multiple agents working together:
 7. **Validation and Feedback Agent** - Validates output and incorporates feedback.
 
 ## Agents
-### Data Ingestion Agent (`data_ingestion_agent.py`)
+### Data Ingestion Agent (`agent.py`)
 Fetches relevant search data from Serper API to gather industry and product information.
 
 ### Market Research and Trend Analysis Agent (`trend_analysis_agent.py`)
@@ -40,16 +40,16 @@ Uses WatsonX to analyze current trends in the specified industry based on ingest
 ### Industry and Product Understanding Agent (`industry_understanding_agent.py`)
 Parses and processes data to understand industry-specific pain points and opportunities for AI.
 
-### AI/GenAI Use Case Generation Agent (`use_case_generation_agent.py`)
+### AI/GenAI Use Case Generation Agent (`genai_usecase.py`)
 Generates AI and GenAI use cases based on insights from industry and market analysis.
 
-### Resource Recommendation Agent (`resource_recommendation_agent.py`)
+### Resource Recommendation Agent (`resource_reccomendation_agent.py`)
 Suggests resources, frameworks, and tools to help implement the AI use cases.
 
 ### CrewAI Collaboration Agent (`collaboration_agent.py`)
 Facilitates collaboration across agents to refine use case suggestions and resource recommendations.
 
-### Validation and Feedback Loop (`validation_agent.py`)
+### Validation and Feedback Loop (`validation.py`)
 Provides validation and feedback to continuously improve the system outputs.
 
 ## Getting Started
@@ -62,13 +62,13 @@ Provides validation and feedback to continuously improve the system outputs.
 
 ### Requirments
 - requests==2.31.0
-_ python-dotenv==1.0.0
-_ crewai
+- python-dotenv==1.0.0
+- crewai
 
 ## Usage
 - Update main.py with the query string and API keys.
-- Run the system:
-     python main.py
+- Run the system: 
+      python main.py
 - Output will display:
       Relevant AI/GenAI use cases
       Resource recommendations
@@ -82,7 +82,7 @@ MultiAgentAI
 │   ├── agent.py         # Serper data ingestion
 │   ├── trend_analysis_agent.py         # WatsonX trend analysis
 │   ├── industry.py # Industry and product insights
-│   ├── genai_usecases.py    # AI/GenAI use case generation
+│   ├── genai_usecase.py    # AI/GenAI use case generation
 │   ├── resource_reccomendation_agent.py # Resource recommendation
 │   ├── collaboration.py          # CrewAI collaboration
 │   └── validation.py             # Validation and feedback
