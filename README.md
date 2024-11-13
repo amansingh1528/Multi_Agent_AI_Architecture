@@ -37,7 +37,7 @@ Fetches relevant search data from Serper API to gather industry and product info
 ### Market Research and Trend Analysis Agent (`trend_analysis_agent.py`)
 Uses WatsonX to analyze current trends in the specified industry based on ingested data.
 
-### Industry and Product Understanding Agent (`industry_understanding_agent.py`)
+### Industry and Product Understanding Agent (`industry.py`)
 Parses and processes data to understand industry-specific pain points and opportunities for AI.
 
 ### AI/GenAI Use Case Generation Agent (`genai_usecase.py`)
