@@ -65,7 +65,17 @@ Provides validation and feedback to continuously improve the system outputs.
 _ python-dotenv==1.0.0
 _ crewai
 
+## Usage
+- Update main.py with the query string and API keys.
+- Run the system:
+     python main.py
+- Output will display:
+      Relevant AI/GenAI use cases
+      Resource recommendations
+      Collaboration insights
+      Validation results
 ## File Structure
+```plaintext
 MultiAgentAI
 │
 ├── agents/                     # Directory containing all agents
@@ -80,13 +90,3 @@ MultiAgentAI
 ├── main.py                     # Main file to run the multi-agent system
 ├── requirements.txt            # Project dependencies
 └── README.md                   # Project documentation
-
-## Usage
-- Update main.py with the query string and API keys.
-- Run the system:
-     python main.py
-- Output will display:
-      Relevant AI/GenAI use cases
-      Resource recommendations
-      Collaboration insights
-      Validation results
