@@ -1,9 +1,4 @@
 
-industry_data = {
-    "query": "AI applications in healthcare"  # This is a sample query for industry data
-}
-
-
 from agents.Industry import fetch_industry_product_data, industry_data
 
 def generate_use_case(data):
