@@ -9,9 +9,7 @@ def fetch_serper_data(query, api_key):
     Fetches relevant search results from Serper API based on a given query.
 
     Parameters:
-<<<<<<< HEAD
-    - query: The search query string (e.g., "apple inc")
-=======
+
     - query: The search query string (e.g., "AI applications in healthcare")
 
     - api_key: Your Serper API key
@@ -61,9 +59,7 @@ def fetch_serper_data(query, api_key):
 
 # Example usage
 
-api_key = '<SERPER-API-KEY>'  # Replace with your actual API key
-
-api_key = '44f18d81d3b3ba224383661e78d4a854b49d20fb'  # Replace with your actual API key
+api_key = '<SERPER-API-KEY>'  # Replace with your actual API key # Replace with your actual API key
 
 query = "AI applications in healthcare"  # Example search query
 data = fetch_serper_data(query, api_key)
