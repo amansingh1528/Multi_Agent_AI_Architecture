@@ -37,9 +37,5 @@ query = "AI applications in healthcare"
 feedback = "The results need more emphasis on healthcare-specific use cases."
 
 final_result = multi_agent_system(query, '<SERPER-API-KEY>', feedback)
-print(final_result)
-
-
-final_result = multi_agent_system(query, '44f18d81d3b3ba224383661e78d4a854b49d20fb', feedback)
 print(json.dumps(final_result, indent=4))
 
