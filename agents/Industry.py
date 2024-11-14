@@ -32,8 +32,6 @@ def fetch_industry_product_data(query, api_key):
 
 api_key = '<SERPER-API-KEY>'
 
-api_key = '44f18d81d3b3ba224383661e78d4a854b49d20fb'
-
 query = "AI trends in healthcare"
 industry_data = fetch_industry_product_data(query, api_key)
 
