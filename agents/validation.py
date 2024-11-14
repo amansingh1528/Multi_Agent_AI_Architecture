@@ -1,6 +1,3 @@
-
-collaboration_result={}
-
 import json
 from agents.collaboration_agent import collaborate_with_crew_agents,collaboration_result
 
