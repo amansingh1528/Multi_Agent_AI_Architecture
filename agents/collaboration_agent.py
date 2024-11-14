@@ -1,16 +1,4 @@
 
-industry_data = {
-    "query": "AI applications in healthcare"  # This is a sample query for industry data
-}
-use_cases = [
-    "Predictive Maintenance for AI-powered devices",
-    "Customer Service Automation with AI Chatbots",
-    "AI-based Fraud Detection in Financial Transactions",
-    "AI for Personalized Healthcare Recommendations",
-    "AI-driven Diagnostics and Imaging Solutions"
-]
-resources={}
-
 from agents.resource_reccomendation_agent import recommend_resources,resources
 from agents.genai_usecase import generate_use_case, use_cases
 from agents.Industry import fetch_industry_product_data, industry_data
