@@ -43,7 +43,7 @@ Parses and processes data to understand industry-specific pain points and opport
 ### AI/GenAI Use Case Generation Agent (`genai_usecase.py`)
 Generates AI and GenAI use cases based on insights from industry and market analysis.
 
-### Resource Recommendation Agent (`resource_reccomendation_agent.py`)
+### Resource Recommendation Agent (`resource_recommendation_agent.py`)
 Suggests resources, frameworks, and tools to help implement the AI use cases.
 
 ### CrewAI Collaboration Agent (`collaboration_agent.py`)
